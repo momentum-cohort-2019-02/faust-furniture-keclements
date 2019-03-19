@@ -10,8 +10,8 @@ Your task is to create a Django app for Faust Furniture. Their current inventory
 
 There should be 2 types of pages: the home page, which shows all available products, and a single-product detail page.
 
-- [ ] Create a 'Product' 'model' with attributes matching the CSV file headers.
-- [ ] Create a method that identifies items on clearance and adjusts the price.
+- [ ] Create a `Product` `model` with attributes matching the CSV file headers.
+- [ ] Create a `method` that identifies items on clearance and adjusts the price.
 - [ ] Apply a 10% discount on the price for items that are in 'good' condition.
 - [ ] Apply a 20% discount on the price for items that are in 'average' condition.
 - [ ] For each clearance item on the page, make sure that the site indicates that the item is on clearance (next to the price, for instance).
@@ -21,14 +21,14 @@ There should be 2 types of pages: the home page, which shows all available produ
 - [ ] "Aesthetically neutral" is a good way to go. 
 - [ ] Specifically, you need to demonstrate that you can use the correct HTML elements for items and write CSS to style them.
 
-1. Create a `Product` model with attributes matching the CSV file headers.
-2. Create a 'method' that identifies items on clearance and adjusts the price.
-    - Apply a 10% discount on the price for items that are in 'good' condition.
-    - Apply a 20% discount on the price for items that are in 'average' condition.
-    - For each clearance item on the page, make sure that the site indicates that the item is on clearance (next to the price, for instance).
-3. Do not show items on the site that have a quantity of 0.
+- [ ] Create a `Product` model with attributes matching the CSV file headers.
+- [ ] Create a `method` that identifies items on clearance and adjusts the price.
+    - [ ] Apply a 10% discount on the price for items that are in 'good' condition.
+    - [ ] pply a 20% discount on the price for items that are in 'average' condition.
+    - [ ] For each clearance item on the page, make sure that the site indicates that the item is on clearance (next to the price, for instance).
+- [ ] Do not show items on the site that have a quantity of 0.
 
-You will need to add the `Product` 'model' to the 'admin' to allow users to update the inventory. For the condition, the _user should have a dropdown_ selection of 'very good', 'good', and 'average' conditions.
+You will need to add the `Product` `model` to the `admin` to allow users to update the inventory. For the condition, the _user should have a dropdown_ selection of 'very good', 'good', and 'average' conditions.
 
 This site should be designed to be usable, but does not have to be ornate. "Aesthetically neutral" is a good way to go. Specifically, you need to demonstrate that you can use the correct HTML elements for items and write CSS to style them.
 
