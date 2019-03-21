@@ -2,7 +2,7 @@ from django.db import models
 
 # Create your models here.
 
-User = get_user_model()
+#User = get_user_model()
 
 class Product(models.Model):
 	EXCELLENT = 'EX'
@@ -23,10 +23,10 @@ class Product(models.Model):
 	price = models.IntegerField(max_length=10, blank=True, null=True, help_text="Enter integer price")
 	category = models.ForeignKey('Category', on_delete=models.SET_NULL, null=True)
 	condition = models.CharField(max_length=2, choices=PRODUCT_CONDITIONS)
-	# TODO product_dimention = models.
+	# product_dimention = models.
 
 	#def product_conditions(self)
 		#conditions = [] 
 
 	def __str__(self):
-		return self.name
+		return self.product_name
