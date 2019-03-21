@@ -5,11 +5,16 @@ from django.db import models
 User = get_user_model()
 
 class Product(models.Model):
-	EXCELLENT = 'ED'
+	EXCELLENT = 'EX'
+	VERY_GOOD = 'VG'
+	GOOD = 'GD'
+	AVERAGE = 'AV'
 
-	PRODCUT_CONDITIONS = (
+	PRODUCT_CONDITIONS = (
 		(EXCELLENT, 'Excelent'),
-		(VERY)
+		(VERY_GOOD, 'Very Good'),
+		(GOOD, 'Good'),
+		(AVERAGE, 'Average')
 	)
 
 	"""Contains information related to the Product for sale"""
@@ -17,13 +22,11 @@ class Product(models.Model):
 	product_description = models.CharField(max_length=250, blank=True, null=True)
 	price = models.IntegerField(max_length=10, blank=True, null=True, help_text="Enter integer price")
 	category = models.ForeignKey('Category', on_delete=models.SET_NULL, null=True)
-	condition = models
-	# class Meta:
-	# 	ordering =['-my_field_name'] 
+	condition = models.CharField(max_length=2, choices=PRODUCT_CONDITIONS)
+	# TODO product_dimention = models.
+
+	#def product_conditions(self)
+		#conditions = [] 
 
 	def __str__(self):
 		return self.name
-
-
-class ProductCategory(models.Model):
-	""
