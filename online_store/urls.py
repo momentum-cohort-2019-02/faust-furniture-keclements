@@ -15,7 +15,11 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from core.views import index, category_detail_view()
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('', index, name='index',),
+    path('category/python', category_detail_view, name='category-detail',)
+]
 ]
