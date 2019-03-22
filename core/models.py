@@ -24,7 +24,17 @@ class Category(models.Model):
         return f"{self.name}"
 
 class Product(models.Model):
-    """Contains information related to the Product for sale"""
+    EXCELLENT = 'EX'
+    VERY_GOOD = 'VG'
+    GOOD = 'GD'
+    AVERAGE = 'AV'
+    PRODUCT_CONDITIONS = (
+     (EXCELLENT, 'Excellent'),
+     (VERY_GOOD, 'Very Good'),
+     (GOOD, 'Good'),
+     (AVERAGE, 'Average')
+    )
+    condition = models.CharField(max_length=2, choices=PRODUCT_CONDITIONS)
     category = models.ForeignKey(Category, related_name='products', on_delete=models.CASCADE)
     name = models.CharField(max_length=200, unique=True, help_text="Enter product name")
     slug = AutoSlugField(unique=True, populate_from="name", blank=True, null=True,)
