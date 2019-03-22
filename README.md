@@ -11,6 +11,7 @@ Your task is to create a Django app for Faust Furniture. Their current inventory
 There should be 2 types of pages: the home page, which shows all available products, and a single-product detail page.
 
 - [x] Create a `Product` `model` with attributes matching the CSV file headers.
+    - item,description,price,condition,dimension_w,dimension_l,dimension_h,quantity,category
 - [ ] Create a `method` that identifies items on clearance and adjusts the price.
 - [ ] Apply a 10% discount on the price for items that are in 'good' condition.
 - [ ] Apply a 20% discount on the price for items that are in 'average' condition.

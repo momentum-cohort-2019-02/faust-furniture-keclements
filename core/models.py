@@ -41,8 +41,8 @@ class Product(models.Model):
     description = models.TextField(max_length=300, blank=True, null=True)
     price = models.DecimalField(max_digits=10, decimal_places=2, help_text="Enter integer price")
     category = models.ForeignKey('Category', on_delete=models.SET_NULL, null=True)
-    #condition = models.CharField(max_length=2, choices=PRODUCT_CONDITIONS)
     available = models.BooleanField(default=True)
+    #condition = models.CharField(max_length=2, choices=PRODUCT_CONDITIONS)
     # product_dimention = models.
 
     class Meta:
