@@ -20,5 +20,5 @@ from core.views import index, product_detail_view
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', index, name='index',),
-    path('product/<int:pk>/', views.product_detail_view, name='product_detail_view'),
+    path('product/<int:pk>/', product_detail_view, name='product_detail_view'),
 ]
