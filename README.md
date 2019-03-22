@@ -1,3 +1,9 @@
+```path('product/<int:pk>/', views.product_detail_view, name='product_detail_view'),``` urls.py
+
+
+
+
+
 # Small Business Website
 
 Faust Furniture is a local vintage furniture retailer with a constantly changing selection. Their showroom has limited floor space so they built a website to show all their inventory.
