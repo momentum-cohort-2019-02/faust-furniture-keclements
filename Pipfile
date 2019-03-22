@@ -9,6 +9,7 @@ yapf = "*"
 
 [packages]
 django = "*"
+django-autoslug = "*"
 
 [requires]
 python_version = "3.7"

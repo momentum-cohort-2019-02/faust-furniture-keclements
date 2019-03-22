@@ -1,5 +1,6 @@
+from autoslug import AutoSlugField
+
 from django.db import models
-from slug import AutoSlugField
 
 # Create your models here.
 
@@ -20,7 +21,7 @@ class Category(models.Model):
         verbose_name_plural = 'categories'
 
     def __str__(self):
-        return f'{self.name}
+        return f"{self.name}"
 
 class Product(models.Model):
     """Contains information related to the Product for sale"""
@@ -41,6 +42,5 @@ class Product(models.Model):
 
     def __str__(self):
         return self.name
-		
-#     category = models.ForeignKey('Category', on_delete=models.SET_NULL, null=True)
 
+#     category = models.ForeignKey('Category', on_delete=models.SET_NULL, null=True)
