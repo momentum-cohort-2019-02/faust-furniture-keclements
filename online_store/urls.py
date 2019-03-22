@@ -20,6 +20,5 @@ from core.views import index, category_detail_view()
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', index, name='index',),
-    path('category/python', category_detail_view, name='category-detail',)
-]
+    path('category/table', category_detail_view, name='category-detail',)
 ]
