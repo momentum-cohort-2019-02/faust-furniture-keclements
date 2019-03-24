@@ -1,5 +1,7 @@
 <h2>this site is about products in a online store</h2>
 
+
+
 {% comment %} {% for  in books %}
 {{ book.title }} by {{ book.author}}
 <br>
@@ -7,8 +9,8 @@
 {% endfor %} {% endcomment %}
 
 {% block content %}
-    {% for product in products%}
-        <div class="post">
+    {% for product in products %}
+        <div class="product">
             <div class="date">
                 {{ post.published_date }}
             </div>
